@@ -9,10 +9,11 @@
 <body>
     <script>
         let money = +prompt('Nhập số tiền muốn gửi: ');
-        let rate = 6.9;
+        let rate = 6.9; // Lãi suất tính theo năm
         let n = +prompt('Nhập số năm muốn gửi: ');
         let profit = parseInt((n * rate * money)/100);
         let total = money + profit;
+        // In ra thông tin
         document.write('Số tiền gốc: ' + money + '<br />');
         document.write('Lãi suất ' + rate + '/ năm <br />');
         document.write('Số tiền lãi khi gửi ' + n + ' năm là: ' + profit + '<br />');

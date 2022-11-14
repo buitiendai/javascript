@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <h1>Caculator</h1>    
+        <input id="first_number" type="text">
+        <input id="last_number" type="text">
+        <br><br>
+        <button type="button" onclick="tinhTong()">Addition(+)</button>
+        <button type="button" onclick="tinhHieu()">Subtraction(-)</button>
+        <button type="button" onclick="tinhTich()">Multiplication(x)</button>
+        <button type="button" onclick="tinhThuong()">Division(/)</button>
+        <p>Result: <b id="result"></b></p>
+</body>
+</html>
+<script>
+    function tinhTong(){
+        let n1 = +document.getElementById('first_number').value;
+        let n2 = +document.getElementById('last_number').value;
+        document.getElementById('result').innerHTML = n1 + n2;
+    }
+    function tinhHieu(){
+        let n1 = +document.getElementById('first_number').value;
+        let n2 = +document.getElementById('last_number').value;
+        document.getElementById('result').innerHTML = n1 - n2;
+    }
+    function tinhTich(){
+        let n1 = +document.getElementById('first_number').value;
+        let n2 = +document.getElementById('last_number').value;
+        document.getElementById('result').innerHTML = n1 * n2;
+    }
+    function tinhThuong(){
+        let n1 = +document.getElementById('first_number').value;
+        let n2 = +document.getElementById('last_number').value;
+        document.getElementById('result').innerHTML = (n1 / n2).toFixed(2);
+    }
+</script>

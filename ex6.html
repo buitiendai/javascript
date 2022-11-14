@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <script>
+        let money = +prompt('Nhập số tiền muốn gửi: ');
+        let rate = 6.9;
+        let n = +prompt('Nhập số năm muốn gửi: ');
+        let profit = parseInt((n * rate * money)/100);
+        let total = money + profit;
+        document.write('Số tiền gốc: ' + money + '<br />');
+        document.write('Lãi suất ' + rate + '/ năm <br />');
+        document.write('Số tiền lãi khi gửi ' + n + ' năm là: ' + profit + '<br />');
+        document.write('Tổng số tiền gốc và lãi sau ' + n + ' năm là: ' + total);
+    </script>
+</body>
+</html>

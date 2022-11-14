@@ -19,16 +19,21 @@
 </body>
 </html>
 <script>
+    //Cách 1: khai báo biến bên ngoài function
+    let first_number = document.getElementById('first_number');
+    let last_number = document.getElementById('last_number');
+
     function tinhTong(){
-        let n1 = +document.getElementById('first_number').value;
-        let n2 = +document.getElementById('last_number').value;
+        let n1 = +first_number.value;
+        let n2 = +last_number.value;
         document.getElementById('result').innerHTML = n1 + n2;
     }
     function tinhHieu(){
-        let n1 = +document.getElementById('first_number').value;
-        let n2 = +document.getElementById('last_number').value;
+        let n1 = +first_number.value;
+        let n2 = +last_number.value;
         document.getElementById('result').innerHTML = n1 - n2;
     }
+    //Cách 2: Khai báo biến bên trong function
     function tinhTich(){
         let n1 = +document.getElementById('first_number').value;
         let n2 = +document.getElementById('last_number').value;

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOver & MouseOut</title>
+</head>
+<body>
+    <p id="demo">Demo MouseOver & MouseOut</p>
+</body>
+</html>
+<script>
+    let changeColor = document.getElementById("demo");
+    changeColor.addEventListener("mouseover", mouseover);
+    changeColor.addEventListener("mouseout", mouseout);
+
+    function mouseover() {
+        document.getElementById("demo").style.color = "red";
+        document.getElementById("demo").style.fontSize = "50px";
+        document.getElementById("demo").style.marginTop = "100px";
+    }
+    function mouseout() {
+        document.getElementById("demo").style.color = "black";
+        document.getElementById("demo").style.fontSize = "14px";
+        document.getElementById("demo").style.marginTop = "0px";
+    }
+</script>

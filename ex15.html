@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Loại Học Sinh</title>
+</head>
+<body>
+    <script>
+        let pointCheck = +prompt("Nhập số điểm để kiểm tra:");
+        if(pointCheck < 0 || pointCheck > 10) {
+            alert('Điểm không hợp lệ');
+        }
+        if(pointCheck >=0 && pointCheck <5) {
+            alert('Học lực yếu');
+        }
+        if(pointCheck >= 5 && pointCheck < 8) {
+            alert('Học lực khá');
+        }
+        if(pointCheck >=8 && pointCheck <=10) {
+            alert('Học lực giỏi');
+        }
+    </script>
+</body>
+</html>

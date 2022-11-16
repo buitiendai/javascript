@@ -25,6 +25,22 @@
         </tr>
         <tr>
             <td>
+                <button type="button" onclick="showNum()">(</button>
+            </td>
+            <td>
+                <button type="button" onclick="showNum()">)</button>
+                
+            </td>
+            <td>
+                <button type="button" onclick="showNum('%')">%</button>
+                
+            </td>
+            <td>
+                <button type="button" onclick="resetData()">AC</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <button type="button" onclick="showNum(7)">7</button>
             </td>
             <td>
@@ -52,7 +68,7 @@
                 
             </td>
             <td>
-                <button type="button" onclick="showNum('X')">/</button>
+                <button type="button" onclick="showNum('*')">X</button>
             </td>
         </tr>
         <tr>
@@ -95,6 +111,9 @@
         function tinh() {
             let phepTinh = document.getElementById("number").value;
             document.getElementById("number").value = eval(phepTinh);
+        }
+        function resetData() {
+            document.getElementById("number").value = ' ';
         }
     </script>
 </body>

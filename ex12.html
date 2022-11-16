@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra Năm nhuận</title>
+</head>
+<body>
+    <p>Nhập vào Năm dương lịch mà bạn muốn kiểm tra có phải năm nhuận hay không</p>
+    <input type="text" id="years">
+    <button type="button" onclick="checkYear();">Kiểm tra</button>
+</body>
+</html>
+<script>
+    function checkYear() {
+        let inputYear = +document.getElementById("years").value;
+        if(inputYear % 4 == 0) {
+            if(inputYear % 100 == 0) {
+                if(inputYear % 400 == 0) {
+                    alert(inputYear + " Là năm nhuận");
+                } else {
+                    alert(inputYear + " Không phải năm nhuận");
+                }
+            } else {
+                alert(inputYear + " là năm nhuận");
+            }
+        } else {
+            alert(inputYear + " Không phải năm nhuận");
+        }      
+    }
+</script>

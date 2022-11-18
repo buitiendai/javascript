@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra giá hoa quả</title>
+</head>
+<body>
+    <input type="text" id="inputPrice">
+    <button type="button" onclick="calPrice()">Kiểm tra</button>
+    <h3 id="rs"></h3>
+
+    <script>
+        function calPrice() {
+            let n = document.getElementById("inputPrice").value.toLowerCase();
+            let g = '';
+            if(n == "ổi") {
+                g = "20.000 VND/Kg";
+            } else if(n == "dưa hấu") {
+                g = "25.000 VND/Kg";
+            } else if(n == "táo") {
+                g = "30.000 VND/Kg";
+            }
+            document.getElementById("rs").innerHTML = g;
+        }
+    </script>
+</body>
+</html>

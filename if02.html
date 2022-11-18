@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số dương và số âm chẵn lẻ</title>
+</head>
+<body>
+    <input type="text" id="inputNum">
+    <button type="button" onclick="checkNum()">Kiểm tra</button>
+    <script>
+        function checkNum() {
+            let inputNum = document.getElementById("inputNum").value;
+            if(inputNum > 0) {
+                if(inputNum % 2 == 0) {
+                    alert('Đây là số dương chẵn');
+                } else {
+                    alert('Đây là số dương lẻ');
+                }
+            } else if(inputNum == 0) {
+                alert('Đây là số 0');
+            } else {
+                if(inputNum % 2 == 0) {
+                    alert('Đây là số âm chẵn');
+                } else {
+                    alert('Đây là số âm lẻ');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

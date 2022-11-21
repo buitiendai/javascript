@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <input type="text" id="inputNum">
+    <select name="" id="currency_1">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+    </select>
+    <select name="" id="currency_2">
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+    </select>
+    <button type="button" onclick="changeCurrency()">Xem</button>
+    <br>
+    <p id="rs"></p>
+    <script>
+        function changeCurrency() {
+            let inputNum = +document.getElementById("inputNum").value;
+            let currency_1 = document.getElementById("currency_1").value;
+            let currency_2 = document.getElementById("currency_2").value;
+            let result = '';
+            if(currency_1 == currency_2) {
+                result = inputNum;
+            }else if(currency_1 == "vnd" && currency_2 == "usd") {
+                result = (inputNum / 23500).toFixed(2) + " " + currency_2.toUpperCase();
+            } else {
+                result = inputNum * 23500;
+            }
+            document.getElementById("rs").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

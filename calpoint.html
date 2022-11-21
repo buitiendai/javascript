@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm thi đại học</title>
+</head>
+<body>
+    <h2>Tính điểm đỗ đại học khối D</h2>
+    <span>Môn Toán</span>
+    <input type="text" id="toan">
+    <br><br>
+    <span>Môn Văn</span>
+    <input type="text" id="van">
+    <br><br>
+    <span>Môn Anh</span>
+    <input type="text" id="anh">
+    <br><br>
+    <span>Khu vực</span>
+    <select name="" id="khuvuc">
+        <option value="kv1">KV1</option>
+        <option value="kv2">KV2</option>
+        <option value="kv2nt">KV2-NT</option>
+        <option value="kv3">KV3</option>
+    </select>
+    <button type="button" onclick="calPoint()">Tính điểm</button>
+    <p>Tổng điểm đại học của bạn là: <b id="rs"></b></p>
+    <script>
+        function calPoint() {
+            let toan = +document.getElementById("toan").value;
+            let van = +document.getElementById("van").value;
+            let anh = +document.getElementById("anh").value;
+            let kv = document.getElementById("khuvuc").value;
+            let dkv = '';
+            if(kv == 'kv1') {
+                dkv = 0.75;
+            }
+            if(kv == 'kv2nt') {
+                dkv = 0.5;
+            }
+            if(kv == 'kv2') {
+                dkv = 0.25;
+            }
+            if(kv == 'kv3') {
+                dkv = 0;
+            }
+            document.getElementById("rs").innerHTML = toan + van + anh + dkv;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÍnh BMI</title>
+</head>
+<body>
+    <!-- Nhập chiều cao (m), cân nặng (kg), tính BMI 
+    BMI = cân nặng / (chiều cao ^ 2)
+    BMI < 16: Gầy
+    16 <= BMI <= 25: Bình thường
+    BMI > 25: Béo phì -->
+
+    <input type="text" placeholder="Chiều cao" id="chieucao">
+    <input type="text" placeholder="Cân nặng" id="cannang">
+    <button type="button" onclick="checkBmi()">Kiểm tra BMI</button>
+    <p id="rs"></p>
+
+    <script>
+        function checkBmi() {
+            let cc = +document.getElementById("chieucao").value;
+            let cn = +document.getElementById("cannang").value;
+            let bmi = cn/cc**2;
+            let kq = '';
+            if(bmi < 16) {
+                kq = "Gầy";
+            } else if(bmi >= 16 && bmi < 25) {
+                kq = "Bình thường";
+            } else {
+                kq = "Béo phì";
+            }
+            document.getElementById("rs").innerHTML = kq;
+        }
+    </script>
+</body>
+</html>

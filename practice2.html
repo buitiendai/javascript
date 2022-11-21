@@ -7,8 +7,8 @@
     <title>Chức năng đăng nhập</title>
 </head>
 <body>
-    <input type="text" id="username">
-    <input type="text" id="password">
+    <input type="text" id="username" placeholder="Nhập Username">
+    <input type="text" id="password" placeholder="Nhập Password">
     <button type="button" onclick="checkLogin()">Đăng nhập</button>
     <script>
         function checkLogin() {
@@ -18,9 +18,9 @@
                 if(passWord == 'TheMaster') {
                     alert('Welcome!');
                 } else if(passWord == 'null') {
-                    alert('Password required');
-                } else {
                     alert('Wrong password');
+                } else {
+                    alert('Password required');
                 }
             } else if(userName == 'null') {
                 alert('Username required');

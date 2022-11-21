@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập toán tử 3 ngôi (tiếp...)</title>
+</head>
+<body>
+    <input type="text" id="inputPosition">
+    <button type="button" onclick="checkPosition()">Check Position</button>
+    <script>
+        function checkPosition() {
+            let position = document.getElementById("inputPosition").value;
+            // let result = (position == 'Employee') ? 'Hello' : ((position == 'Director') ? 'Greetings' : ((position == '') ? 'No Login' : ''));
+            let result = (position == 'Employee') ? 'Hello' : (position == 'Director') ? 'Greeting' : (position == '') ? 'No Login' : '';
+            alert(result);
+        }
+    </script>
+</body>
+</html>

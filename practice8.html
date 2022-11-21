@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày</title>
+</head>
+<body>
+    <h2>Nhập vào tháng để biết số ngày trong tháng</h2>
+    <input type="text" id="inputMonth">
+    <button type="button" onclick="checkMonth()">Kiểm tra</button>
+    <script>
+        function checkMonth() {
+            let inputMonth = +document.getElementById("inputMonth").value;
+            if (inputMonth == 1 || inputMonth == 3 || inputMonth == 5 || inputMonth == 7 || inputMonth == 8 || inputMonth == 10 || inputMonth == 12) {
+                    alert('Tháng ' + inputMonth + ' có 31 ngày');
+            } else if(inputMonth == 4 || inputMonth == 6 || inputMonth == 9 || inputMonth == 11) {
+                alert('Tháng ' + inputMonth + ' có 30 ngày');
+            } else if(inputMonth == 2) {
+                alert('Tháng ' + inputMonth + ' có 28 hoặc 29 ngày');
+            } else {
+                alert('Tháng không đúng');
+            }
+        }
+    </script>
+</body>
+</html>

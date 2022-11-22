@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm Đại học khối D</title>
+</head>
+<body>
+    <h1>Nhập vào điểm để tính tổng</h1>
+    <input type="text" id="toan" placeholder="Toán">
+    <input type="text" id="van" placeholder="Văn">
+    <input type="text" id="anh" placeholder="Anh">
+    <select name="" id="khuvuc">
+        <option value="kv1">KV1</option>
+        <option value="kv2">KV2</option>
+        <option value="kv2nt">KV2-NT</option>
+        <option value="kv3">KV3</option>
+    </select>
+    <button onclick="tinhTong()">Xem điểm</button>
+    <br>
+    <h3 id="rs"></h3>
+    <p id="ketqua"></p>
+    <script>
+        function tinhTong() {
+            let toan = +document.getElementById("toan").value;
+            let van = +document.getElementById("van").value;
+            let anh = +document.getElementById("anh").value;
+            let khuvuc = document.getElementById("khuvuc").value;
+            let tongdiem;
+
+            switch(khuvuc) {
+                case ('kv1'): 
+                    tongdiem = toan + van + anh + 0.75;
+                    break;
+                case ('kv2'): 
+                    tongdiem = toan + van + anh + 0.25;
+                    break;
+                case ('kv2nt'): 
+                    tongdiem = toan + van + anh + 0.5;
+                    break;
+                default: 
+                    tongdiem = toan + van + anh;
+                    break;
+            }
+            document.getElementById("rs").innerHTML = 'Điểm Đại học khối D của bạn là: ' + tongdiem;
+            if(tongdiem > 19.5) {
+                document.getElementById("ketqua").innerHTML = 'Chúc mừng bạn đã đỗ Đại học khối D';
+            } else {
+                document.getElementById("ketqua").innerHTML = 'Rất tiếc, bạn chưa đủ điểm đỗ Đại học khối D';
+            }
+        }
+    </script>
+</body>
+</html>

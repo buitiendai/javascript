@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giá Hoa Quả</title>
+</head>
+<body>
+    <input type="text" id="inputName">
+    <button onclick="checkPrice()">Kiểm tra giá</button>
+    <h3 id="showPrice"></h3>
+    <script>
+        function checkPrice() {
+            let inputname = document.getElementById("inputName").value.toLowerCase();
+            let price;
+            switch (inputname) {
+                case ('ổi'): 
+                    price = '20.000 VNĐ/Kg';
+                    break;
+                case ('dưa hấu'): 
+                    price = '20.000 VNĐ/Kg';
+                    break;
+                case ('táo'): 
+                    price = '30.000 VNĐ/Kg';
+                    break;
+                case ('xoài'): 
+                    price = '30.000 VNĐ/Kg';
+                    break;
+                case ('cam'): 
+                    price = '40.000 VNĐ/Kg';
+                    break;
+                case ('chôm chôm'): 
+                    price = '40.000 VNĐ/Kg';
+                    break;
+                case ('măng cụt'): 
+                    price = '50.000 VNĐ/Kg';
+                    break;
+                default: 
+                    price = 'Chưa cập nhật giá cho sản phẩm này';
+                    break;
+            }
+            document.getElementById("showPrice").innerHTML = 'Có giá: ' + price;
+        }
+
+    </script>
+</body>
+</html>
